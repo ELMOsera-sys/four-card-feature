@@ -1,0 +1,137 @@
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Grey-500: hsl(234, 12%, 34%);
+--Grey-400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+--font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+main{
+    width: 20rem;
+    margin:0 auto;
+    text-align: center;
+    padding: 1rem ;
+    color: var(--Grey-500);
+}
+
+h1{
+    font-size: min(1.5rem,10vw);
+    font-weight: 400;
+}
+.h1-sub{
+    margin-bottom: 1rem;
+    font-size: min(1.5rem,10vw);
+    font-weight: 700;
+}
+p{
+    font-size: min(1rem,8vw);
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: min(1.2rem,6vw);
+    margin-top: 1rem;
+}
+.p-card{
+    font-size: min(0.9rem,5vw);
+    margin-bottom: 2rem;
+}
+section{
+    width: 20rem;
+}
+div{
+    text-align: left;
+    margin:2rem auto;
+    width: 18rem;
+    height: 14rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.img-div{
+    text-align: right;
+    padding:0 1rem ;
+}
+
+.supervisor-card{
+    box-shadow: 0 -7px var(--Cyan),
+    1px 0px 3px var(--Grey-500),
+    -1px 0px 3px var(--Grey-500),
+    0px -1px 3px var(--Grey-500)
+    ;
+}
+.builder-card{
+    box-shadow: 0 -7px var(--Red),
+    1px 0px 3px var(--Grey-500),
+    -1px 0px 3px var(--Grey-500),
+    0px -1px 3px var(--Grey-500)
+    ;
+}
+.karma-card{
+    box-shadow: 0 -7px var(--Orange),
+    1px 0px 3px var(--Grey-500),
+    -1px 0px 3px var(--Grey-500),
+    0px -1px 3px var(--Grey-500)
+    ;
+}
+.calculator-card{
+    box-shadow: 0 -7px var(--Blue),
+    1px 0px 3px var(--Grey-500),
+    -1px 0px 3px var(--Grey-500),
+    0px -1px 3px var(--Grey-500)
+    ;
+}
+@media (min-width: 40rem){
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro{
+        width: 40rem;
+        margin-bottom: 2rem;
+    }
+    .cards {
+    width: 60rem;              
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    grid-template-areas:
+      "supervisor builder calculator"
+      "supervisor karma calculator";
+  }
+
+  .supervisor-card { grid-area: supervisor; }
+  .builder-card    { grid-area: builder; }
+  .karma-card      { grid-area: karma; }
+  .calculator-card { grid-area: calculator; }
+
+  div{
+    width: 18rem;
+    height: 14rem;
+  }
+
+  .supervisor-card,.calculator-card{
+    margin-top:12rem;
+  }
+  .img-div{
+    width: 6rem;
+    margin-left: 10rem;
+  }
+  img{
+    width: 100%;
+  }
+
+}
+    
