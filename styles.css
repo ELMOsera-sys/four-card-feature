@@ -104,34 +104,24 @@ div{
     .cards {
     width: 60rem;              
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
     grid-template-areas:
-      "supervisor builder calculator"
-      "supervisor karma calculator";
+    ". builder ."
+    "supervisor builder karma"
+    "supervisor calculator karma"
+    ". calculator .";
   }
+    .builder-card{
+        grid-area: builder;
+    }
+    .supervisor-card{
+        grid-area: supervisor;
+    }
+    .karma-card{
+        grid-area: karma;
+    }
+    .calculator-card{
+        grid-area: calculator;
+    }
 
-  .supervisor-card { grid-area: supervisor; }
-  .builder-card    { grid-area: builder; }
-  .karma-card      { grid-area: karma; }
-  .calculator-card { grid-area: calculator; }
-
-  div{
-    width: 18rem;
-    height: 14rem;
-  }
-
-  .supervisor-card,.calculator-card{
-    margin-top:12rem;
-  }
-  .img-div{
-    width: 6rem;
-    margin-left: 10rem;
-  }
-  img{
-    width: 100%;
-  }
 
 }
-    
